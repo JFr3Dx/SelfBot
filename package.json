@@ -1,0 +1,29 @@
+{
+  "name": "SelfBot",
+  "version": "1.0.0",
+  "description": "Selfbot discord.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: Test no especificado\" && exit 1"
+  },
+  "author": "TheTravik",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "date-time": "^2.1.0",
+    "discord.js": "github:hydrabolt/discord.js#master",
+    "djs-collection-persistent": "^0.1.3",
+    "got": "^7.1.0",
+    "js-beautify": "^1.6.14",
+    "moment": "^2.18.1",
+    "moment-duration-format": "^1.3.0",
+    "ms": "^2.0.0",
+    "request": "^2.81.0",
+    "superagent": "^3.5.2",
+    "ws": "^3.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

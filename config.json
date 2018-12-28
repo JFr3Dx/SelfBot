@@ -1,0 +1,14 @@
+{
+  "botToken"			: "",
+  "channels" 			: {
+    "logs"				: "",
+    "mentions"			: ""
+  },
+  "password"			: "",
+  "prefix"				: "",
+  "tmdbKey"				:"",
+  "giphy"				:"",
+  "OwnerID"             :"",
+  "GoogleApiKey"        :"",
+  "OWMApiKey"           :""
+}
