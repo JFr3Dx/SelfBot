@@ -32,17 +32,16 @@ fs.readdir('./commands/', (err, files) => {
 function numazar(min,max){
   return Math.round(Math.random() * (max - min) + min);
 }
-client.on("message", msg => {
 fs.readdir('./events/', (err, files) => {
-  if (err) console.error(err);
-  console.log(`Eventos cargados: ${files.length}.`);
-  files.forEach(file => {
-    const eventName = file.split(".")[0];
-    const event = require(`./events/${file}`);
-    client.on(eventName, event.bind(null, client));
-    delete require.cache[require.resolve(`./events/${file}`)];
-  });
+    if (err) console.error(err);
+    console.log(`cargado un total de ${files.length} eventos.`);
+    files.forEach(file => {
+        if (file.split(".").slice(-1)[0] !== "js") return
+        const eventName = file.split(".")[0];
+        const event = require(`./events/${file}`);
+        client.on(eventName, event.bind(null, client));
+        delete require.cache[require.resolve(`./events/${file}`)];
+    });
 });
 
 client.login(config.botToken);
-client.password = config.password;
